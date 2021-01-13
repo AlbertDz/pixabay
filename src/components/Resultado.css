@@ -1,0 +1,9 @@
+.content-images {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+.buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.buttons .btn {
+    background-color: #fff;
+    border-radius: 35px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.buttons .btn.disabled {
+    background-color: #f1f1f1;
+    cursor: default;
+    color: #ccc;
+    font-weight: 700;
+}
