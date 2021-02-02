@@ -7,17 +7,6 @@ const Burbujas = () => {
             <div className="color"></div>
             <div className="color"></div>
             <div className="color"></div>
-
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
-            <div className="burbuja"></div>
         </div>
     );
 }
