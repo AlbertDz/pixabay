@@ -13,7 +13,8 @@ class App extends Component {
     pagina: '',
     items: 12,
     buscar: false,
-    loading: false
+    loading: false,
+    error: false
   }
 
   isResult = false;
@@ -48,7 +49,8 @@ class App extends Component {
 
     fetch(url)
     .then(response => response.json())
-    .then(result => this.setState({ imagenes: result.hits, buscar: true, loading: false }, this.scroll()))
+    .then(result => this.setState({ imagenes: result.hits, buscar: true, loading: false, error: false }, this.scroll()))
+    .catch(error => this.setState({ buscar: true, loading: false, error: true }, this.scroll()))
   }
 
   datosBusqueda = (termino) => {
@@ -72,7 +74,7 @@ class App extends Component {
 
         { this.loader() }
 
-        <Resultado buscar={this.state.buscar} termino={this.state.termino} items={this.state.items} imagenes={this.state.imagenes} actual={this.state.pagina} paginaAnterior={this.paginaAnterior} paginaSiguiente={this.paginaSiguiente} />
+        <Resultado buscar={this.state.buscar} error={this.state.error} termino={this.state.termino} items={this.state.items} imagenes={this.state.imagenes} actual={this.state.pagina} paginaAnterior={this.paginaAnterior} paginaSiguiente={this.paginaSiguiente} />
       </div>
     );
   }

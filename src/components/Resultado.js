@@ -8,7 +8,7 @@ import { animateScroll as scroll} from 'react-scroll';
 class Resultados extends Component {
     mostrarImagenes = () => {
         const imagenes = this.props.imagenes;
-        if (imagenes.length === 0) return <NoResult termino={this.props.termino} buscar={this.props.buscar} />;
+        if (imagenes.length === 0 || this.props.error === true) return <NoResult error={this.props.error} buscar={this.props.buscar} />;
 
         return(
             <React.Fragment>
